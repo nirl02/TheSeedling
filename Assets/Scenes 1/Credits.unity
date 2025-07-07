@@ -841,8 +841,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Art, Animation, Level Room Logic: \nKatja\nMatrikel#\n\nGame Logic,
-    Sfx:\nLemuel\nMatrikel#\n\nUI, Animation, Music:\nNico Renz \n2801496"
+  m_text: "Game Art, Animation, Level Room Logic: \nKatja Ela Schr\xF6der\n2790679\n\nGame
+    Logic:\nLemuel Amoah\n2784083\n\nUI, Animation, Music:\nNico Renz \n2801496"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8868acf03b089824dbd804fae933be56, type: 2}
   m_sharedMaterial: {fileID: -5503914249326214904, guid: 8868acf03b089824dbd804fae933be56, type: 2}
