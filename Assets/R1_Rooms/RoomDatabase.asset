@@ -122,7 +122,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_09
-    roomPrefab: {fileID: 7648335603298808969, guid: 076b14f1f434a2d4ead168f12e852faf, type: 3}
+    roomPrefab: {fileID: 4584148883966164252, guid: 09c49663b60b1984d8247766bcc82167, type: 3}
     hasNorthExit: 1
     hasEastExit: 0
     hasSouthExit: 0
