@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-// Credits for Script: https://www.youtube.com/@grove-of-gnomes @ https://www.youtube.com/watch?v=MNUYe0PWNNs&ab_channel=RehopeGames comment
 public class PauseMenu : MonoBehaviour
 {
     bool gamePaused = false;
+
+    /*PauseMenu Canvas*/
     [SerializeField] GameObject pauseMenu;
+
+    void Start()
+    {
+        pauseMenu.SetActive(false);
+    }
 
     void Update()
     {
@@ -17,12 +22,18 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 0;
             gamePaused = true;
             pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
         }
         else if ((Input.GetKeyDown(KeyCode.Escape) && gamePaused == true))
         {
             Time.timeScale = 1;
             gamePaused = false;
             pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
         }
     }
 
@@ -37,6 +48,14 @@ public class PauseMenu : MonoBehaviour
         gamePaused = false;
         pauseMenu.SetActive(false);
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(1);
+        Continue();
+        Debug.Log("Game restarted");
+    }
+
 
         public void QuitGame()
     {

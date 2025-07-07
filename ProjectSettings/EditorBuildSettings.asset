@@ -4,6 +4,24 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes 1/StartMenu.unity
+    guid: a074ea88643f48d4a9fe71f7e3920cae
+  - enabled: 1
+    path: Assets/Scenes 1/MGDS.unity
+    guid: d9fae381d3320ba4faf118ed8bac3656
+  - enabled: 1
+    path: Assets/Scenes 1/Tutorial.unity
+    guid: 881638084f4e4ef4b9365cf2708c6bc8
+  - enabled: 1
+    path: Assets/Scenes 1/Credits.unity
+    guid: 2f4f1c4fdf1424f42a455f9437fb059d
+  - enabled: 1
+    path: Assets/Scenes 1/Add Victory.unity
+    guid: 51ce98069ee6ae749ad26ea29f7b67b6
+  - enabled: 1
+    path: Assets/Scenes 1/Add Defeat.unity
+    guid: 00a10b375f33d604a8d4f8d6a40c7847
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
