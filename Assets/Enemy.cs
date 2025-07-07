@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
 
     /*Attack Parameters*/
     private bool playerInRange = false;
-    private bool isAttacking = false;
+    //private bool isAttacking = false;
     private float attackCooldown = 2f;
     private float nextAttackTime = 0f;
 
@@ -147,11 +147,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= nextAttackTime && !isAttacking)
+        if (Time.time >= nextAttackTime /*&& !isAttacking*/)
         {
             if (playerInRange)
             {
-                isAttacking = true;
+                //isAttacking = true;
                 animator.SetTrigger("Attack");
 
                 nextAttackTime = Time.time + attackCooldown;
@@ -184,6 +184,6 @@ public class Enemy : MonoBehaviour
 
     public void OnAttackAnimationEnd()
     {
-        isAttacking = false;
+        //isAttacking = false;
     }
 }
