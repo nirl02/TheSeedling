@@ -9,13 +9,11 @@ public class MyPlayerScript : MonoBehaviour
     
 {
     ThirdPersonMovement moveScript;
-    ThirdPersonDash moveScript2;
     MeleeAttack attackScript;
 
     void Start()
     {
         moveScript = GetComponent<ThirdPersonMovement>();
-        moveScript2 = GetComponent<ThirdPersonDash>();
         attackScript = GetComponent<MeleeAttack>();
     }
 
@@ -29,7 +27,6 @@ public class MyPlayerScript : MonoBehaviour
 
         if (gamepad.rightTrigger.isPressed)
         {
-            moveScript2 = GetComponent<ThirdPersonDash>();
         }
 
         Vector3 move = gamepad.leftStick.ReadValue();
@@ -40,14 +37,14 @@ public class MyPlayerScript : MonoBehaviour
 
         if (gamepad.buttonEast.isPressed)
         {
-            //Debug.Log("Kreis gedrückt");
+            //Debug.Log("Kreis gedrï¿½ckt");
 
            // attackScript.Update;
         }
 
         if (gamepad.rightShoulder.isPressed)
         {
-            //Debug.Log("R1 gedrückt");
+            //Debug.Log("R1 gedrï¿½ckt");
             // Beispielaktion: Dash oder Block etc.
         }
 
