@@ -314,7 +314,7 @@ Transform:
   m_GameObject: {fileID: 4054738937732918016}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.255672, y: 0, z: 15.267416}
+  m_LocalPosition: {x: 3.255672, y: 2, z: 15.267416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -334,35 +334,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XYZConstraint: 0
   waypoints:
-  - position: {x: -13.054816, y: 1, z: -8.125222}
+  - position: {x: -13.054816, y: 0, z: -8.125222}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: -13.054816, y: 1, z: -8.125222}
-    xyPosition: {x: -13.054816, y: 1, z: 0}
+    xyzPosition: {x: -13.054816, y: 0, z: -8.125222}
+    xyPosition: {x: -13.054816, y: 0, z: 0}
     xzPosition: {x: -13.054816, y: 0, z: -8.125222}
-  - position: {x: -4.6205072, y: 1, z: -8.3904085}
+  - position: {x: -4.6205072, y: 0, z: -8.3904085}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: -4.6205072, y: 1, z: -8.3904085}
-    xyPosition: {x: -4.6205072, y: 1, z: 0}
+    xyzPosition: {x: -4.6205072, y: 0, z: -8.3904085}
+    xyPosition: {x: -4.6205072, y: 0, z: 0}
     xzPosition: {x: -4.6205072, y: 0, z: -8.3904085}
-  - position: {x: -1.0273399, y: 1, z: -12.382187}
+  - position: {x: -1.0273399, y: 0, z: -12.382187}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: -1.0273399, y: 1, z: -12.382187}
-    xyPosition: {x: -1.0273399, y: 1, z: 0}
+    xyzPosition: {x: -1.0273399, y: 0, z: -12.382187}
+    xyPosition: {x: -1.0273399, y: 0, z: 0}
     xzPosition: {x: -1.0273399, y: 0, z: -12.382187}
-  - position: {x: 1.4164572, y: 1, z: -17.271402}
+  - position: {x: 1.4164572, y: 0, z: -17.271402}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: 1.4164572, y: 1, z: -17.271402}
-    xyPosition: {x: 1.4164572, y: 1, z: 0}
+    xyzPosition: {x: 1.4164572, y: 0, z: -17.271402}
+    xyPosition: {x: 1.4164572, y: 0, z: 0}
     xzPosition: {x: 1.4164572, y: 0, z: -17.271402}
-  - position: {x: -3.785946, y: 1, z: -21.552914}
+  - position: {x: -3.785946, y: 0, z: -21.552914}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: -3.785946, y: 1, z: -21.552914}
-    xyPosition: {x: -3.785946, y: 1, z: 0}
+    xyzPosition: {x: -3.785946, y: 0, z: -21.552914}
+    xyPosition: {x: -3.785946, y: 0, z: 0}
     xzPosition: {x: -3.785946, y: 0, z: -21.552914}
-  - position: {x: -6.692731, y: 1, z: -13.052228}
+  - position: {x: -6.692731, y: 0, z: -13.052228}
     rotation: {x: 0, y: 0, z: 0, w: 1}
-    xyzPosition: {x: -6.692731, y: 1, z: -13.052228}
-    xyPosition: {x: -6.692731, y: 1, z: 0}
+    xyzPosition: {x: -6.692731, y: 0, z: -13.052228}
+    xyPosition: {x: -6.692731, y: 0, z: 0}
     xzPosition: {x: -6.692731, y: 0, z: -13.052228}
 --- !u!1 &4613218291180743909
 GameObject:
@@ -4937,15 +4937,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 326740509212657573, guid: 509bd6923c318ed4ca4b3f1eca5b8a63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.870792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326740509212657573, guid: 509bd6923c318ed4ca4b3f1eca5b8a63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326740509212657573, guid: 509bd6923c318ed4ca4b3f1eca5b8a63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.018805
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326740509212657573, guid: 509bd6923c318ed4ca4b3f1eca5b8a63, type: 3}
       propertyPath: m_LocalRotation.w

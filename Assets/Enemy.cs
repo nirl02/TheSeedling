@@ -199,8 +199,8 @@ public class Enemy : MonoBehaviour
 
         if (animator != null && animator.enabled)
         {
-            animator.SetFloat("xVelocity", horizontalVelocity.x);
-            animator.SetFloat("zVelocity", horizontalVelocity.z);
+            animator.SetFloat("xVelocity", horizontalVelocity.x+1);
+            animator.SetFloat("zVelocity", horizontalVelocity.z+1);
         }
 
         // Sprite flipping

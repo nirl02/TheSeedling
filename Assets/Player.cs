@@ -33,17 +33,19 @@ public class Player : MonoBehaviour
         g_playerHP = g_playerMaxHP;
         soulEnergy = 0;
         g_hpText.UpdateText(g_playerHP);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        // Debug Button für +5 Energie
+        // Debug Button fï¿½r +5 Energie
         if (Input.GetKeyDown(KeyCode.F1))
         {
             DebugAddEnergy();
         }
 
-        // E-Taste für Nexus Übertragung
+        // E-Taste fï¿½r Nexus ï¿½bertragung
         if (Input.GetKeyDown(KeyCode.E) && inNexusArea && soulEnergy > 0 || gamepad != null && gamepad.buttonSouth.isPressed && inNexusArea && soulEnergy > 0)
         {
             TransferEnergyToNexus();
@@ -63,10 +65,12 @@ public class Player : MonoBehaviour
         // Spieler auf/unter 0 Leben stirbt
         if (g_playerHP <= 0)
         {
+            Time.timeScale = 0f;
             Debug.Log("Spieler gestorben!");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             // Level neuladen
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName, LoadSceneMode.Single);
+            SceneManager.LoadScene("Add Defeat", LoadSceneMode.Additive);
         }
 
         // Update der Lebensanzeige
@@ -76,23 +80,23 @@ public class Player : MonoBehaviour
     }
 
     /**
-    * Wird aufgerufen wenn ein Gegner stirbt - Spieler erhält Seelenenergie
+    * Wird aufgerufen wenn ein Gegner stirbt - Spieler erhï¿½lt Seelenenergie
     */
     public void OnEnemyKilled()
     {
-        // Zufällige Seelenenergie zwischen 2 und 6
+        // Zufï¿½llige Seelenenergie zwischen 2 und 6
         int energyGain = Random.Range(2, 7); // 7 ist exklusiv, also 2-6
 
-        // Seelenenergie hinzufügen, aber nicht über Maximum
+        // Seelenenergie hinzufï¿½gen, aber nicht ï¿½ber Maximum
         soulEnergy = Mathf.Min(soulEnergy + energyGain, maxSoulEnergy);
 
         Debug.Log($"Seelenenergie erhalten: {energyGain}, Gesamt: {soulEnergy}/{maxSoulEnergy}");
 
-        // Hier kannst du später UI-Updates für die Seelenenergie-Anzeige hinzufügen
+        // Hier kannst du spï¿½ter UI-Updates fï¿½r die Seelenenergie-Anzeige hinzufï¿½gen
     }
 
     /**
-    * Debug Funktion: Fügt 5 Seelenenergie hinzu (F1 Taste)
+    * Debug Funktion: Fï¿½gt 5 Seelenenergie hinzu (F1 Taste)
     */
     private void DebugAddEnergy()
     {
@@ -100,13 +104,13 @@ public class Player : MonoBehaviour
         int oldEnergy = soulEnergy;
         soulEnergy = Mathf.Min(soulEnergy + energyGain, maxSoulEnergy);
 
-        Debug.Log($"DEBUG: Energie hinzugefügt - Alt: {oldEnergy}, Neu: {soulEnergy}/{maxSoulEnergy}");
+        Debug.Log($"DEBUG: Energie hinzugefï¿½gt - Alt: {oldEnergy}, Neu: {soulEnergy}/{maxSoulEnergy}");
 
-        // Hier kannst du später UI-Updates für die Seelenenergie-Anzeige hinzufügen
+        // Hier kannst du spï¿½ter UI-Updates fï¿½r die Seelenenergie-Anzeige hinzufï¿½gen
     }
 
     /**
-    * Überträgt alle Seelenenergie zum Nexus Portal
+    * ï¿½bertrï¿½gt alle Seelenenergie zum Nexus Portal
     */
     private void TransferEnergyToNexus()
     {
@@ -117,10 +121,10 @@ public class Player : MonoBehaviour
             if (energyManager != null)
             {
                 energyManager.AddEnergy(soulEnergy);
-                Debug.Log($"Seelenenergie übertragen: {soulEnergy} -> Nexus Portal");
-                soulEnergy = 0; // Alle Energie übertragen
+                Debug.Log($"Seelenenergie ï¿½bertragen: {soulEnergy} -> Nexus Portal");
+                soulEnergy = 0; // Alle Energie ï¿½bertragen
 
-                // Hier kannst du später UI-Updates für die Seelenenergie-Anzeige hinzufügen
+                // Hier kannst du spï¿½ter UI-Updates fï¿½r die Seelenenergie-Anzeige hinzufï¿½gen
             }
             else
             {
@@ -136,7 +140,7 @@ public class Player : MonoBehaviour
     {
         inNexusArea = true;
         currentNexusArea = nexusArea;
-        Debug.Log("Nexus Area betreten - Drücke E um Seelenenergie zu übertragen");
+        Debug.Log("Nexus Area betreten - Drï¿½cke E um Seelenenergie zu ï¿½bertragen");
     }
 
     /**

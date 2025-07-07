@@ -69,6 +69,9 @@ public class SoulEnergyManager : MonoBehaviour
     */
     private void TriggerWinCondition()
     {
+        SceneManager.LoadScene("Add Victory", LoadSceneMode.Additive);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         Debug.Log("WIN CONDITION ERREICHT! Nexus Portal aktiviert!");
 
         // Hier kannst du verschiedene Win-Aktionen einfügen:
