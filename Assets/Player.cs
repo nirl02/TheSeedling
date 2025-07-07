@@ -1,6 +1,7 @@
 //using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] GameObject pauseMenu;
     bool gamePaused = false;
+    Gamepad gamepad;
 
     /* Nexus System */
     private bool inNexusArea = false;
@@ -42,7 +44,7 @@ public class Player : MonoBehaviour
         }
 
         // E-Taste für Nexus Übertragung
-        if (Input.GetKeyDown(KeyCode.E) && inNexusArea && soulEnergy > 0)
+        if (Input.GetKeyDown(KeyCode.E) && inNexusArea && soulEnergy > 0 || gamepad != null && gamepad.buttonSouth.isPressed && inNexusArea && soulEnergy > 0)
         {
             TransferEnergyToNexus();
         }
