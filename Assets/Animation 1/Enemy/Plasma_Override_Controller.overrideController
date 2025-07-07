@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Plasma_Override_Controller
+  m_Controller: {fileID: 9100000, guid: 2141f131b10602e45a30c032bdcdb62e, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 393eaa1f58403134280252f231dff1c0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0efbf56cb6f23ea4ba0e103f4a13c726, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1fc23a58974656a43b5dcf149770ee94, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e7fdee4ea08a67846af03b69749a102c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f82e1269e79408745b8ce62bc2b58e37, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 45f1019c910be5e42b8f522d67f27c1c, type: 2}

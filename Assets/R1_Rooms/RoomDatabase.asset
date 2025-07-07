@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3527d151fc811b041b2be26e0d7dbbc2, type: 3}
+  m_Name: RoomDatabase
+  m_EditorClassIdentifier: 
+  allRooms:
+  - roomName: R1_00
+    roomPrefab: {fileID: 5846420415832151348, guid: 5e56c1e29ce45104c8ccc3abffe8235b, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 0
+    hasWestExit: 0
+    roomTag: start
+    roomNumber: 0
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_01
+    roomPrefab: {fileID: 5145825830140049707, guid: b6095206df9237442945f315718087c7, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_02
+    roomPrefab: {fileID: 3000908210742845845, guid: bd691d28c5d23324790c7efae1f818b5, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 1
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_03
+    roomPrefab: {fileID: 5178527908804913146, guid: c96ac3cfac8a0ac469b42e83f4c081b8, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_04
+    roomPrefab: {fileID: 5578635799738895429, guid: 89556a645775914419558986df0f7f90, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: deadend
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_05
+    roomPrefab: {fileID: 1437656815413030011, guid: d3410905f61713d4cbbd81de2fbd9de1, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 0
+    hasSouthExit: 0
+    hasWestExit: 1
+    roomTag: deadend
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_06
+    roomPrefab: {fileID: 6335361271297792423, guid: deeceb4d1796a0f4d857f7e8d7451af0, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_07
+    roomPrefab: {fileID: 1574879476705645078, guid: 97fe0b129571f94428197bb30aba35f9, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 1
+    hasSouthExit: 0
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_08
+    roomPrefab: {fileID: 8455252814701507174, guid: 31ee02ba88568ce40bdd879ce2a0546d, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 1
+    hasSouthExit: 0
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_09
+    roomPrefab: {fileID: 2256370567166040790, guid: 4c1cd09391961f74b83124795e76737d, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 0
+    hasWestExit: 0
+    roomTag: deadend
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_10
+    roomPrefab: {fileID: 5277908521945404545, guid: 3505b49357c8f6a41ab4112223daae22, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 1
+    hasSouthExit: 0
+    hasWestExit: 0
+    roomTag: deadend
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_nexus
+    roomPrefab: {fileID: 3771891747657870278, guid: 1c32fc755a51f1c41ba951aa15c81fc7, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: end
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_fallbackEast
+    roomPrefab: {fileID: 6833190042138403135, guid: d5f4f5cfeb3e5b444b0922e02b8a379c, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 1
+    hasSouthExit: 0
+    hasWestExit: 0
+    roomTag: fallback
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_fallbackWest
+    roomPrefab: {fileID: 2755340470089483606, guid: 684eaa445081b5247bfd407e70ef0acd, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 0
+    hasWestExit: 1
+    roomTag: fallback
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
+  - roomName: R1_fallbackSouth
+    roomPrefab: {fileID: 7892420589829082602, guid: 206473b1685d2df46911e813b457cae4, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: fallback
+    roomNumber: -1
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: -1
+    westRoomNumber: -1
