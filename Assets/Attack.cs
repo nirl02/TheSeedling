@@ -8,10 +8,12 @@ public class MeleeAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    //bool isAttacking = false;
     float horizontalInput;
     public int attackDamage = 40;
     Gamepad gamepad;
+
+    public float attackRate = 1f;
+    float nextAttackTime = 0f;
 
     void Start()
     {
@@ -22,50 +24,60 @@ public class MeleeAttack : MonoBehaviour
         }
     }
 
-
-    public float attackRate = 1f;
-    float nextAttackTime = 0f;
     public void Update()
     {
-        // horizontalInput = Input.GetAxis("Horizontal");
-        // FlipSprite();
-
-
         if (Input.GetMouseButtonDown(0) || (gamepad != null && gamepad.buttonEast.isPressed))
         {
             if (Time.time >= nextAttackTime)
             {
                 Attacking();
-                nextAttackTime = Time.time + 0f / attackRange;
+                nextAttackTime = Time.time + 1f / attackRate; // Korrigiert: war 0f / attackRange
             }
         }
         else
         {
-            //isAttacking = false;
-            animator.SetBool("isAttacking", false);
+            if (animator != null)
+            {
+                animator.SetBool("isAttacking", false);
+            }
         }
-
-
     }
-
 
     public void Attacking()
     {
-        Debug.Log("Attacking");
-        //isAttacking = true;
-        animator.SetBool("isAttacking", true);
+        Debug.Log("Player attacking");
 
-        //Detect enemies in range of attack
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
-
-        //Schaden
-        foreach (Collider enemy in hitEnemies)
+        if (animator != null)
         {
-            //  float type = TypeChart.GetEffectivness()
-            enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
-            Debug.Log(enemy.name);
+            animator.SetBool("isAttacking", true);
         }
 
+        // Sicherheitscheck für attackPoint
+        if (attackPoint == null)
+        {
+            Debug.LogWarning("AttackPoint is not assigned!");
+            return;
+        }
+
+        // Detect enemies in range of attack
+        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+
+        // Schaden verursachen
+        foreach (Collider enemyCollider in hitEnemies)
+        {
+            if (enemyCollider == null) continue;
+
+            Enemy enemy = enemyCollider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                Debug.Log($"Hitting enemy: {enemy.name}");
+                enemy.TakeDamage(attackDamage);
+            }
+            else
+            {
+                Debug.LogWarning($"Object {enemyCollider.name} has no Enemy component but is on enemy layer");
+            }
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -73,8 +85,7 @@ public class MeleeAttack : MonoBehaviour
         if (attackPoint == null)
             return;
 
-
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
-
