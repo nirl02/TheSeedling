@@ -7098,6 +7098,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431789686}
   m_CullTransparentMesh: 1
+--- !u!1 &1431838426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431838428}
+  - component: {fileID: 1431838427}
+  m_Layer: 0
+  m_Name: SoulEnergyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1431838427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431838426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6c0729ecd30b94cab62428feeb1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalEnergyCollected: 0
+  energyRequiredForWin: 40
+  showDebugInfo: 1
+--- !u!4 &1431838428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431838426}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441862173
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,11 +9701,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992129555}
   m_Mesh: {fileID: 6435232653203700262, guid: dd0882c6d8a8dfe4fab381434ec97973, type: 3}
---- !u!1 &1834417337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5536316139138574847, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
-  m_PrefabInstance: {fileID: 900567883}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2007951949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c649fbb55bb5d8c4bbb678fbf0097160, type: 3}
@@ -10999,3 +11041,4 @@ SceneRoots:
   - {fileID: 65545471}
   - {fileID: 550155488}
   - {fileID: 260217223}
+  - {fileID: 1431838428}

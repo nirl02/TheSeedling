@@ -14,6 +14,7 @@ public class PortalTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             PortalUI.Instance?.HideCanvas();
+
         }
     }
 }
