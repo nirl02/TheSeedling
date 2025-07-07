@@ -46,8 +46,7 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Spieler gestorben!");
             // Level neuladen
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName, LoadSceneMode.Single);
+            SceneManager.LoadScene("Add Defeat", LoadSceneMode.Single);
         }
 
         // Update der Lebensanzeige
