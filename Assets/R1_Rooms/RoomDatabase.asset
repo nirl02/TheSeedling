@@ -170,7 +170,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_fallbackWest
-    roomPrefab: {fileID: 2755340470089483606, guid: 684eaa445081b5247bfd407e70ef0acd, type: 3}
+    roomPrefab: {fileID: 6037671079799722815, guid: 76d40c35d63891d4a80e579aef6cfa88, type: 3}
     hasNorthExit: 1
     hasEastExit: 0
     hasSouthExit: 0
