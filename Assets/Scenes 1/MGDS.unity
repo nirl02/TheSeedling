@@ -1110,15 +1110,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.47685
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.62
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1126,15 +1126,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2368159129828880896, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1536,7 +1536,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4e63438c6cbbbbd4f9cc2bc1620890e6, type: 3}
   m_Resource: {fileID: 8300000, guid: 4e63438c6cbbbbd4f9cc2bc1620890e6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.508
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 1
@@ -1687,6 +1687,7 @@ MonoBehaviour:
   deadEndPreferenceForArms: 85
   debugGeneration: 1
   generateOnStart: 1
+  player: {fileID: 1834417337}
   generatedRooms:
   - roomName: R1_00
     roomPrefab: {fileID: 5846420415832151348, guid: 5e56c1e29ce45104c8ccc3abffe8235b, type: 3}
@@ -1712,18 +1713,6 @@ MonoBehaviour:
     eastRoomNumber: -1
     southRoomNumber: 0
     westRoomNumber: -1
-  - roomName: R1_01
-    roomPrefab: {fileID: 5145825830140049707, guid: b6095206df9237442945f315718087c7, type: 3}
-    hasNorthExit: 1
-    hasEastExit: 0
-    hasSouthExit: 1
-    hasWestExit: 1
-    roomTag: 
-    roomNumber: 2
-    northRoomNumber: 3
-    eastRoomNumber: -1
-    southRoomNumber: 1
-    westRoomNumber: 4
   - roomName: R1_03
     roomPrefab: {fileID: 5178527908804913146, guid: c96ac3cfac8a0ac469b42e83f4c081b8, type: 3}
     hasNorthExit: 0
@@ -1731,11 +1720,71 @@ MonoBehaviour:
     hasSouthExit: 1
     hasWestExit: 1
     roomTag: 
-    roomNumber: 3
+    roomNumber: 2
     northRoomNumber: -1
     eastRoomNumber: -1
-    southRoomNumber: 2
-    westRoomNumber: 5
+    southRoomNumber: 1
+    westRoomNumber: 3
+  - roomName: R1_02
+    roomPrefab: {fileID: 5701556136044370037, guid: bd691d28c5d23324790c7efae1f818b5, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 1
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: 
+    roomNumber: 3
+    northRoomNumber: 5
+    eastRoomNumber: 2
+    southRoomNumber: 4
+    westRoomNumber: -1
+  - roomName: R1_06
+    roomPrefab: {fileID: 6335361271297792423, guid: deeceb4d1796a0f4d857f7e8d7451af0, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: 
+    roomNumber: 4
+    northRoomNumber: 3
+    eastRoomNumber: -1
+    southRoomNumber: 6
+    westRoomNumber: -1
+  - roomName: R1_04
+    roomPrefab: {fileID: 5578635799738895429, guid: 89556a645775914419558986df0f7f90, type: 3}
+    hasNorthExit: 0
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 0
+    roomTag: deadend
+    roomNumber: 5
+    northRoomNumber: -1
+    eastRoomNumber: -1
+    southRoomNumber: 3
+    westRoomNumber: -1
+  - roomName: R1_01
+    roomPrefab: {fileID: 5145825830140049707, guid: b6095206df9237442945f315718087c7, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: 6
+    northRoomNumber: 4
+    eastRoomNumber: -1
+    southRoomNumber: 7
+    westRoomNumber: 8
+  - roomName: R1_01
+    roomPrefab: {fileID: 5145825830140049707, guid: b6095206df9237442945f315718087c7, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 1
+    hasWestExit: 1
+    roomTag: 
+    roomNumber: 7
+    northRoomNumber: 6
+    eastRoomNumber: -1
+    southRoomNumber: 11
+    westRoomNumber: 9
   - roomName: R1_10
     roomPrefab: {fileID: 5277908521945404545, guid: 3505b49357c8f6a41ab4112223daae22, type: 3}
     hasNorthExit: 0
@@ -1743,47 +1792,11 @@ MonoBehaviour:
     hasSouthExit: 0
     hasWestExit: 0
     roomTag: deadend
-    roomNumber: 4
-    northRoomNumber: -1
-    eastRoomNumber: 2
-    southRoomNumber: -1
-    westRoomNumber: -1
-  - roomName: R1_07
-    roomPrefab: {fileID: 1574879476705645078, guid: 97fe0b129571f94428197bb30aba35f9, type: 3}
-    hasNorthExit: 0
-    hasEastExit: 1
-    hasSouthExit: 0
-    hasWestExit: 1
-    roomTag: 
-    roomNumber: 5
-    northRoomNumber: -1
-    eastRoomNumber: 3
-    southRoomNumber: -1
-    westRoomNumber: 6
-  - roomName: R1_07
-    roomPrefab: {fileID: 1574879476705645078, guid: 97fe0b129571f94428197bb30aba35f9, type: 3}
-    hasNorthExit: 0
-    hasEastExit: 1
-    hasSouthExit: 0
-    hasWestExit: 1
-    roomTag: 
-    roomNumber: 6
-    northRoomNumber: -1
-    eastRoomNumber: 5
-    southRoomNumber: -1
-    westRoomNumber: 7
-  - roomName: R1_07
-    roomPrefab: {fileID: 1574879476705645078, guid: 97fe0b129571f94428197bb30aba35f9, type: 3}
-    hasNorthExit: 0
-    hasEastExit: 1
-    hasSouthExit: 0
-    hasWestExit: 1
-    roomTag: 
-    roomNumber: 7
+    roomNumber: 8
     northRoomNumber: -1
     eastRoomNumber: 6
     southRoomNumber: -1
-    westRoomNumber: 8
+    westRoomNumber: -1
   - roomName: R1_fallbackEast
     roomPrefab: {fileID: 6833190042138403135, guid: d5f4f5cfeb3e5b444b0922e02b8a379c, type: 3}
     hasNorthExit: 1
@@ -1791,8 +1804,8 @@ MonoBehaviour:
     hasSouthExit: 0
     hasWestExit: 0
     roomTag: fallback
-    roomNumber: 8
-    northRoomNumber: 9
+    roomNumber: 9
+    northRoomNumber: 10
     eastRoomNumber: 7
     southRoomNumber: -1
     westRoomNumber: -1
@@ -1803,10 +1816,22 @@ MonoBehaviour:
     hasSouthExit: 1
     hasWestExit: 0
     roomTag: end
-    roomNumber: 9
+    roomNumber: 10
     northRoomNumber: -1
     eastRoomNumber: -1
-    southRoomNumber: 8
+    southRoomNumber: 9
+    westRoomNumber: -1
+  - roomName: R1_09
+    roomPrefab: {fileID: 2256370567166040790, guid: 4c1cd09391961f74b83124795e76737d, type: 3}
+    hasNorthExit: 1
+    hasEastExit: 0
+    hasSouthExit: 0
+    hasWestExit: 0
+    roomTag: deadend
+    roomNumber: 11
+    northRoomNumber: 7
+    eastRoomNumber: -1
+    southRoomNumber: -1
     westRoomNumber: -1
 --- !u!4 &1749135429
 Transform:
@@ -1893,6 +1918,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2809424899303076344, guid: 90e183a748ea1c040b9336180a151000, type: 3}
   m_PrefabInstance: {fileID: 799270460175820797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1834417337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5536316139138574847, guid: 16f3efacf89a1f942908b2a5006684a4, type: 3}
+  m_PrefabInstance: {fileID: 900567883}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2007951949 stripped
 Transform:

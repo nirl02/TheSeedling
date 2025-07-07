@@ -26,7 +26,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_01
-    roomPrefab: {fileID: 5145825830140049707, guid: b6095206df9237442945f315718087c7, type: 3}
+    roomPrefab: {fileID: 7574204156784251709, guid: 5d6b9e1dedcf9be4fa2276cfa3665d1b, type: 3}
     hasNorthExit: 1
     hasEastExit: 0
     hasSouthExit: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_02
-    roomPrefab: {fileID: 3000908210742845845, guid: bd691d28c5d23324790c7efae1f818b5, type: 3}
+    roomPrefab: {fileID: 5701556136044370037, guid: bd691d28c5d23324790c7efae1f818b5, type: 3}
     hasNorthExit: 1
     hasEastExit: 1
     hasSouthExit: 1
@@ -62,7 +62,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_04
-    roomPrefab: {fileID: 5578635799738895429, guid: 89556a645775914419558986df0f7f90, type: 3}
+    roomPrefab: {fileID: 282482745843406283, guid: 29340df8d9f0a124e8f95a9fb41c7d6a, type: 3}
     hasNorthExit: 0
     hasEastExit: 0
     hasSouthExit: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_06
-    roomPrefab: {fileID: 6335361271297792423, guid: deeceb4d1796a0f4d857f7e8d7451af0, type: 3}
+    roomPrefab: {fileID: 9086523743683942027, guid: 8bb2f10f511bb0f4f98c0177717367cd, type: 3}
     hasNorthExit: 1
     hasEastExit: 0
     hasSouthExit: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_07
-    roomPrefab: {fileID: 1574879476705645078, guid: 97fe0b129571f94428197bb30aba35f9, type: 3}
+    roomPrefab: {fileID: 2564253857124625825, guid: dc279c53f989c794e899ff5e32d69181, type: 3}
     hasNorthExit: 0
     hasEastExit: 1
     hasSouthExit: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_08
-    roomPrefab: {fileID: 8455252814701507174, guid: 31ee02ba88568ce40bdd879ce2a0546d, type: 3}
+    roomPrefab: {fileID: 1681795940140557126, guid: c65a5cc742eb8d0478c35636b70ee9c1, type: 3}
     hasNorthExit: 0
     hasEastExit: 1
     hasSouthExit: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_09
-    roomPrefab: {fileID: 2256370567166040790, guid: 4c1cd09391961f74b83124795e76737d, type: 3}
+    roomPrefab: {fileID: 7648335603298808969, guid: 076b14f1f434a2d4ead168f12e852faf, type: 3}
     hasNorthExit: 1
     hasEastExit: 0
     hasSouthExit: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     southRoomNumber: -1
     westRoomNumber: -1
   - roomName: R1_10
-    roomPrefab: {fileID: 5277908521945404545, guid: 3505b49357c8f6a41ab4112223daae22, type: 3}
+    roomPrefab: {fileID: 4080144215365089485, guid: 0d38793cfc5890f4d935708d9f88765a, type: 3}
     hasNorthExit: 0
     hasEastExit: 1
     hasSouthExit: 0

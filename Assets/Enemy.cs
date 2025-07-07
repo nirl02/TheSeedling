@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     /* Besiegen des Gegners */
     public delegate void EnemyKilled(Enemy enemy);
 
-    /* Event: Ein Gegner wird besiegt 
+    /* Event: Ein Gegner wird besiegt */
     public event EnemyKilled g_onEnemyKilled;
 
     /**
@@ -60,6 +60,17 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died");
+
+        // Benachrichtige den Spieler über den Tod des Gegners
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            player.OnEnemyKilled();
+        }
+
+        // Event für andere Systeme auslösen (falls noch andere darauf hören)
+        g_onEnemyKilled?.Invoke(this);
+
         Destroy(transform.root.gameObject);
     }
 
@@ -117,20 +128,20 @@ public class Enemy : MonoBehaviour
 
 
 
-/**
-* Spieler verlässt den Sichtbereich des Gegners und dieser lauft weiter.
+    /**
+    * Spieler verlässt den Sichtbereich des Gegners und dieser lauft weiter.
 */
-public void PlayerExitRange()
-{
-    // Wenn es einen WaypointTraveler gibt, wird dieser fortgesetzt.
-    if (g_waypointsTraveler != null)
+    public void PlayerExitRange()
     {
-        g_waypointsTraveler.Move(true);
-    }
+        // Wenn es einen WaypointTraveler gibt, wird dieser fortgesetzt.
+        if (g_waypointsTraveler != null)
+        {
+            g_waypointsTraveler.Move(true);
+        }
 
         playerInRange = false;
         g_player = null;
-}
+    }
 
 
     // Update is called once per frame

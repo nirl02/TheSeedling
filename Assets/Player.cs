@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
     public int g_playerMaxHP;
     [SerializeField] public int g_playerHP;
 
+    /* Seelenenergie System */
+    [SerializeField] public int soulEnergy = 0;
+    [SerializeField] public int maxSoulEnergy = 20;
 
     /* Text der Lebensanzahl */
     [SerializeField] private PlayerHP g_hpText;
@@ -23,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         g_playerHP = g_playerMaxHP;
+        soulEnergy = 0;
         g_hpText.UpdateText(g_playerHP);
     }
 
@@ -49,9 +53,24 @@ public class Player : MonoBehaviour
         // Update der Lebensanzeige
         g_hpText.UpdateText(g_playerHP);
         hp_bar.UpdateHealthBar(g_playerHP);
-        
+
     }
 
-   
-}
+    /**
+    * Wird aufgerufen wenn ein Gegner stirbt - Spieler erhält Seelenenergie
+    */
+    public void OnEnemyKilled()
+    {
+        // Zufällige Seelenenergie zwischen 2 und 6
+        int energyGain = Random.Range(2, 7); // 7 ist exklusiv, also 2-6
 
+        // Seelenenergie hinzufügen, aber nicht über Maximum
+        soulEnergy = Mathf.Min(soulEnergy + energyGain, maxSoulEnergy);
+
+        Debug.Log($"Seelenenergie erhalten: {energyGain}, Gesamt: {soulEnergy}/{maxSoulEnergy}");
+
+        // Hier kannst du später UI-Updates für die Seelenenergie-Anzeige hinzufügen
+    }
+
+
+}
