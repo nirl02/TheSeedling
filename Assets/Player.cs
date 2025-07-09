@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             // Level neuladen
-            SceneManager.LoadScene("Add Defeat", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Add Defeat", LoadSceneMode.Single);
         }
 
         // Update der Lebensanzeige

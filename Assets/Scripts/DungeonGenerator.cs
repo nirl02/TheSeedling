@@ -152,7 +152,7 @@ public class DungeonGenerator : MonoBehaviour
         int currentRoomId = currentRoomData.roomNumber;
 
         // 2. Hauptpfad generieren
-        List<int> mainPathRooms = new List<int> { currentRoomId };
+        List<RoomData> mainPathRooms = new List<RoomData> { currentRoomData };
         Direction nextDirection = GetRandomAvailableDirection(currentRoomData);
 
         for (int i = 0; i < mainPathLength - 1; i++)
@@ -185,13 +185,9 @@ public class DungeonGenerator : MonoBehaviour
 
             ConnectRooms(currentRoomData, nextRoom, nextDirection);
 
-            // WICHTIG: Arme vom vorherigen Raum generieren, aber NICHT vom aktuellen
-            // da der aktuelle Raum noch weitere Verbindungen bekommen könnte
-            GenerateArmsFromRoom(currentRoomData, mainPathRooms);
-
             currentRoomData = nextRoom;
             currentRoomId = currentRoomData.roomNumber;
-            mainPathRooms.Add(currentRoomId);
+            mainPathRooms.Add(currentRoomData);
 
             List<Direction> availableDirections = GetAvailableDirections(currentRoomData);
             availableDirections.Remove(GetOppositeDirection(nextDirection));
@@ -207,9 +203,26 @@ public class DungeonGenerator : MonoBehaviour
 
         // 3. Endraum GARANTIERT anfügen
         EnsureEndRoom(currentRoomData, mainPathRooms);
+
+        // 4. JETZT erst Arme von allen Hauptpfad-Räumen generieren (außer dem letzten)
+        List<int> mainPathRoomNumbers = mainPathRooms.Select(r => r.roomNumber).ToList();
+
+        // Generiere Arme für alle Hauptpfad-Räume außer dem letzten
+        for (int i = 0; i < mainPathRooms.Count - 1; i++)
+        {
+            GenerateArmsFromRoom(mainPathRooms[i], mainPathRoomNumbers);
+        }
+
+        // Für den letzten Raum: Generiere Arme nur, wenn er noch verfügbare Ausgänge hat
+        // (nach der Endraum-Verbindung)
+        RoomData lastRoom = mainPathRooms[mainPathRooms.Count - 1];
+        if (GetAvailableDirections(lastRoom).Count > 0)
+        {
+            GenerateArmsFromRoom(lastRoom, mainPathRoomNumbers);
+        }
     }
 
-    private void EnsureEndRoom(RoomData currentRoom, List<int> mainPathRooms)
+    private void EnsureEndRoom(RoomData currentRoom, List<RoomData> mainPathRooms)
     {
         // Endräume finden
         var endRooms = roomDatabase.GetRoomsWithTag("end");
@@ -250,9 +263,6 @@ public class DungeonGenerator : MonoBehaviour
         {
             // Direkter Endraum verbinden
             ConnectRooms(currentRoom, endRoom, connectionDirection);
-
-            // Arme vom letzten Hauptpfad-Raum generieren (NACH der Endraum-Verbindung)
-            GenerateArmsFromRoom(currentRoom, mainPathRooms);
         }
         else
         {
@@ -306,9 +316,6 @@ public class DungeonGenerator : MonoBehaviour
             {
                 Debug.LogError("Kein Endraum mit Südeingang für Fallback-Raum gefunden!");
             }
-
-            // Arme vom letzten Hauptpfad-Raum generieren (NACH allen Verbindungen)
-            GenerateArmsFromRoom(currentRoom, mainPathRooms);
         }
     }
 
