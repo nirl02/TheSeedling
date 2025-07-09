@@ -15,5 +15,7 @@ public class SoulEnergyCollectedText : MonoBehaviour
         energyProgressText.text = energyProgress.ToString()
                                     + "/"
                                     + maxEnergy.ToString();
+
+
     }
 }

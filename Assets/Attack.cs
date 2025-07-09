@@ -31,7 +31,7 @@ public class MeleeAttack : MonoBehaviour
             if (Time.time >= nextAttackTime)
             {
                 Attacking();
-                nextAttackTime = Time.time + 1f / attackRate; // Korrigiert: war 0f / attackRange
+                nextAttackTime = Time.time + 1.5f / attackRate; // Korrigiert: war 0f / attackRange
             }
         }
         else

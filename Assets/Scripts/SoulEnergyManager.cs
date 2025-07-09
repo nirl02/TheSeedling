@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class SoulEnergyManager : MonoBehaviour
 {
     [Header("Nexus Portal Settings")]
@@ -15,6 +16,9 @@ public class SoulEnergyManager : MonoBehaviour
 
     private void Start()
     {
+        totalEnergyCollected = 0;
+        energyRequiredForWin = 40;
+        progressText.UpdateText(totalEnergyCollected, energyRequiredForWin);
         // Stelle sicher, dass dieser Manager über Scene-Wechsel bestehen bleibt
         DontDestroyOnLoad(gameObject);
 
@@ -31,7 +35,7 @@ public class SoulEnergyManager : MonoBehaviour
             Debug.Log($"SoulEnergyManager initialisiert - Fortschritt: {totalEnergyCollected}/{energyRequiredForWin}");
         }
 
-        progressText.UpdateText(totalEnergyCollected,energyRequiredForWin);
+        
     }
 
     private void Update()
