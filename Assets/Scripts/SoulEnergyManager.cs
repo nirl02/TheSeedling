@@ -7,8 +7,11 @@ public class SoulEnergyManager : MonoBehaviour
     [SerializeField] private int totalEnergyCollected = 0;
     [SerializeField] private int energyRequiredForWin = 40;
 
+    [SerializeField] private SoulEnergyProgressText progressText;
+
     [Header("Debug Info")]
     [SerializeField] private bool showDebugInfo = true;
+    //[SerializeField] private Text progressText;
 
     private void Start()
     {
@@ -27,6 +30,8 @@ public class SoulEnergyManager : MonoBehaviour
         {
             Debug.Log($"SoulEnergyManager initialisiert - Fortschritt: {totalEnergyCollected}/{energyRequiredForWin}");
         }
+
+        progressText.UpdateText(totalEnergyCollected,energyRequiredForWin);
     }
 
     private void Update()
@@ -51,6 +56,7 @@ public class SoulEnergyManager : MonoBehaviour
     public void AddEnergy(int amount)
     {
         totalEnergyCollected += amount;
+        progressText.UpdateText(totalEnergyCollected,energyRequiredForWin);
 
         if (showDebugInfo)
         {

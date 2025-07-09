@@ -27,12 +27,14 @@ public class Player : MonoBehaviour
     /* Nexus System */
     private bool inNexusArea = false;
     private NexusArea currentNexusArea;
+    [SerializeField] private SoulEnergyCollectedText energyCollectedText;
 
     void Start()
     {
         g_playerHP = g_playerMaxHP;
         soulEnergy = 0;
         g_hpText.UpdateText(g_playerHP);
+        energyCollectedText.UpdateText(soulEnergy,maxSoulEnergy);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -89,7 +91,7 @@ public class Player : MonoBehaviour
 
         // Seelenenergie hinzuf�gen, aber nicht �ber Maximum
         soulEnergy = Mathf.Min(soulEnergy + energyGain, maxSoulEnergy);
-
+        energyCollectedText.UpdateText(soulEnergy, maxSoulEnergy);
         Debug.Log($"Seelenenergie erhalten: {energyGain}, Gesamt: {soulEnergy}/{maxSoulEnergy}");
 
         // Hier kannst du sp�ter UI-Updates f�r die Seelenenergie-Anzeige hinzuf�gen
@@ -123,6 +125,7 @@ public class Player : MonoBehaviour
                 energyManager.AddEnergy(soulEnergy);
                 Debug.Log($"Seelenenergie �bertragen: {soulEnergy} -> Nexus Portal");
                 soulEnergy = 0; // Alle Energie �bertragen
+                energyCollectedText.UpdateText(soulEnergy,maxSoulEnergy);
 
                 // Hier kannst du sp�ter UI-Updates f�r die Seelenenergie-Anzeige hinzuf�gen
             }
